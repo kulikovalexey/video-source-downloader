@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Video Source Downloader",
+  "version": "1.0",
+  "description": "Allows users to download videos from web pages.",
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
